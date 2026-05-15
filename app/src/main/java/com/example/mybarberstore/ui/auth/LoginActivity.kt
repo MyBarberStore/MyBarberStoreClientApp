@@ -27,13 +27,13 @@ class LoginActivity : AppCompatActivity() {
 
         sessionManager = SessionManager(this)
 
-        // 1. Referencias del XML
+        //  Referencias del XML
         val etEmail = findViewById<TextInputEditText>(R.id.etEmail)
         val etPassword = findViewById<TextInputEditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val tvCreateAccount = findViewById<TextView>(R.id.tvCreateAccount)
 
-        // 2. Click del Botón Login
+        //  Click del Botón Login
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val pass = etPassword.text.toString().trim()
@@ -47,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // 3. Click para ir a Registro
+        //  Click para ir a Registro
         tvCreateAccount.setOnClickListener {
              val intent = Intent(this, RegisterActivity::class.java)
              startActivity(intent)
@@ -74,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                     finish() // Cerramos el login
                 }
             } else {
-                // Error de credenciales (401 o 403 de tu API)
+                // Error de credenciales
                 Toast.makeText(this, getString(R.string.error_login), Toast.LENGTH_SHORT).show()
             }
         }

@@ -36,10 +36,10 @@ class BookingStep2Fragment : Fragment(R.layout.fragment_booking_step2) {
 
                 if (response.isSuccessful && response.body() != null) {
                     val adapter = BarberAdapter(response.body()!!) { barber ->
-                        // 1. Guardar elección
+                        //  Guardar elección
                         bookingViewModel.selectedBarber.value = barber
 
-                        // 2. Pasar al Paso 3 (Fecha)
+                        //  Pasar al Paso 3 (Fecha)
                         (parentFragment as? BookingFragment)?.showStep(3)
                     }
                     rvBarbers.adapter = adapter

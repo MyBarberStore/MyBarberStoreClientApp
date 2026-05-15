@@ -18,7 +18,7 @@ import retrofit2.http.Query
 import retrofit2.http.Streaming
 
 interface ApiService {
-    @POST("auth/login") // Cambia esto por tu ruta real de Spring
+    @POST("auth/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
 
     @POST("auth/register")

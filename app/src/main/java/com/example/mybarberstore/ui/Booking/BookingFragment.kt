@@ -38,30 +38,29 @@ class BookingFragment : Fragment(R.layout.fragment_booking) {
     }
 
     private fun updateUI(step: Int) {
-        // 1. Obtenemos las referencias a los círculos
+        //  Obtenemos las referencias a los círculos
         val tvStep1 = view?.findViewById<TextView>(R.id.tvStep1)
         val tvStep2 = view?.findViewById<TextView>(R.id.tvStep2)
         val tvStep3 = view?.findViewById<TextView>(R.id.tvStep3)
         val tvStep4 = view?.findViewById<TextView>(R.id.tvStep4)
 
-        // 2. Metemos los círculos en una lista para manejarlos fácilmente
+        //  Metemos los círculos en una lista para manejarlos fácilmente
         val steps = listOf(tvStep1, tvStep2, tvStep3, tvStep4)
 
-        // 3. Recorremos la lista y aplicamos el estilo
+        //  Recorremos la lista y aplicamos el estilo
         steps.forEachIndexed { index, textView ->
             val currentCircleStep = index + 1
 
             if (currentCircleStep == step) {
-                // ESTADO ACTIVO: El círculo del paso en el que estamos
+                // ESTADO ACTIVO:
                 textView?.setBackgroundResource(R.drawable.bg_circle_step_active)
                 textView?.setTextColor(android.graphics.Color.WHITE)
             } else if (currentCircleStep < step) {
-                // OPCIONAL - ESTADO COMPLETADO: Círculos de pasos que ya pasamos
-                // Si quieres que los anteriores sigan resaltados, usa el mismo 'active'
+                // OPCIONAL - ESTADO COMPLETADO
                 textView?.setBackgroundResource(R.drawable.bg_circle_step_active)
                 textView?.setTextColor(android.graphics.Color.WHITE)
             } else {
-                // ESTADO INACTIVO: Círculos de pasos que aún no han llegado
+                // ESTADO INACTIVO
                 textView?.setBackgroundResource(R.drawable.bg_circle_step_inactive)
                 textView?.setTextColor(android.graphics.Color.parseColor("#7F8C8D"))
             }

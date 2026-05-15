@@ -73,10 +73,9 @@ class BookingStep3Fragment : Fragment(R.layout.fragment_booking_step3) {
                 val response = RetroFitClient.instance.getAvailableHours(barberId, date)
                 if (response.isSuccessful && response.body() != null) {
                     val adapter = HourAdapter(response.body()!!) { hour ->
-                        // Guardamos la hora y... ¡estamos listos para el Paso 4 (Resumen)!
+
                         bookingViewModel.selectedTime.value = hour
 
-                        // Añadimos un pequeño botón de "Siguiente" o pasamos automáticamente
                         (parentFragment as? BookingFragment)?.showStep(4)
                     }
                     rvHours.adapter = adapter

@@ -35,7 +35,7 @@ class BookingStep1Fragment : Fragment(R.layout.fragment_booking_step1) {
     }
 
     private fun loadServices() {
-        // 0. Accedemos al ViewModel compartido (importante: usamos el scope del padre)
+        //  Accedemos al ViewModel compartido (importante: usamos el scope del padre)
         val bookingViewModel: BookingViewModel by viewModels({ requireParentFragment() })
 
         lifecycleScope.launch {
@@ -49,12 +49,11 @@ class BookingStep1Fragment : Fragment(R.layout.fragment_booking_step1) {
                     // Configuramos el adaptador con la lista recibida
                     val adapter = ServiceAdapter(servicesList) { service ->
 
-                        // 1. Guardar servicio seleccionado en el ViewModel
+                        //  Guardar servicio seleccionado en el ViewModel
                         // Esto es vital para que al final del proceso sepamos qué se reservó
                         bookingViewModel.selectedService.value = service
 
-                        // 2. Saltar al Paso 2 en el Fragmento Padre
-                        // Usamos parentFragment porque BookingStep1 vive dentro de BookingFragment
+                        //  Saltar al Paso 2 en el Fragmento Padre
                         (parentFragment as? BookingFragment)?.showStep(2)
                     }
 

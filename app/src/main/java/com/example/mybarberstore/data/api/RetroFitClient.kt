@@ -9,10 +9,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetroFitClient {
     private const val BASE_URL = "http://10.0.2.2:8080/"
 
-    // 1. PRIMERO: Declaramos la variable del token
+    // Declaramos la variable del token
     var authToken: String? = null
 
-    // 2. SEGUNDO: Definimos el interceptor
+    // Definimos el interceptor
     private val authInterceptor = Interceptor { chain ->
         val request = chain.request().newBuilder()
 
@@ -24,7 +24,7 @@ object RetroFitClient {
         chain.proceed(request.build())
     }
 
-    // 3. TERCERO: Creamos el cliente de OKHttp usando el interceptor ya definido arriba
+    // Creamos el cliente de OKHttp usando el interceptor ya definido arriba
     private val httpClient = OkHttpClient.Builder()
         .addInterceptor(authInterceptor)
         .addInterceptor(HttpLoggingInterceptor().apply {
