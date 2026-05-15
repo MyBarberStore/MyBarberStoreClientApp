@@ -58,7 +58,6 @@ class BookingStep4Fragment : Fragment(R.layout.fragment_booking_step4) {
 
     private fun enviarReserva() {
         // Recuperamos el ID del cliente que guardamos al iniciar sesión
-        // Asegúrate de que en tu SessionManager tengas un método fetchClientId()
         val clientId = sessionManager.fetchClientId()
 
         val request = AppointmentRequest(

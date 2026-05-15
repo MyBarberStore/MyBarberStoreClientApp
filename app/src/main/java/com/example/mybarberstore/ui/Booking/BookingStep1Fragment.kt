@@ -35,7 +35,6 @@ class BookingStep1Fragment : Fragment(R.layout.fragment_booking_step1) {
     }
 
     private fun loadServices() {
-        //  Accedemos al ViewModel compartido (importante: usamos el scope del padre)
         val bookingViewModel: BookingViewModel by viewModels({ requireParentFragment() })
 
         lifecycleScope.launch {

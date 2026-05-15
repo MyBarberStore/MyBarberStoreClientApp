@@ -59,7 +59,6 @@ class LoginActivity : AppCompatActivity() {
                 // Error de conexión (Exception en el repositorio)
                 Toast.makeText(this, "Error de conexión con el servidor", Toast.LENGTH_SHORT).show()
             } else if (response.isSuccessful) {
-                // ¡ÉXITO!
                 val loginData = response.body()
                 loginData?.let {
                     sessionManager.saveAuthToken(it.token)

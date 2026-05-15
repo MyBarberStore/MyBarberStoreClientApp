@@ -94,7 +94,7 @@ class HistoryAdapter(
         val context = holder.itemView.context
         val color = Color.parseColor(colorHex)
 
-        holder.tvActionText.text = context.getString(textoResId) // Traducimos aquí
+        holder.tvActionText.text = context.getString(textoResId)
         holder.tvActionText.setTextColor(color)
         holder.ivActionIcon.setImageResource(iconRes)
         holder.ivActionIcon.imageTintList = ColorStateList.valueOf(color)
