@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Barber Store</string>
+    <string name="welcome">Welcome!</string>
+    <string name="login_btn">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="error_empty_fields">Please fill all fields</string>
+    <string name="error_login">Invalid credentials</string>
+    <string name="success_login">Welcome, %1$s</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="create_account">Create account</string>
+    <string name="subtitle_login">Access your trusted barbershop</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="password_label">Password</string>
+
+    <!-- Strings for Register -->
+    <string name="title_register">Create your account</string>
+    <string name="subtitle_register">Join our community</string>
+    <string name="name_label">Full name</string>
+    <string name="phone_label">Phone number</string>
+    <string name="register_btn">Register</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="login_link">Login</string>
+    <string name="success_register">Account created successfully</string>
+
+    <!-- Strings for Home -->
+
+    <string name="app_name_brand">BarberPro</string>
+    <string name="home_welcome_title">Welcome!</string>
+    <string name="home_welcome_sub">Welcome to BarberPro</string>
+    <string name="home_promo_title">Style and Tradition</string>
+    <string name="home_promo_sub">The best barbershop in town</string>
+    <string name="home_location_label">Our Location</string>
+    <string name="home_btn_maps">Maps</string>
+    <string name="home_address_label">Address</string>
+    <string name="home_address_value">Gran Via Parque St., Cordoba</string>
+    <string name="home_phone_label">Phone</string>
+    <string name="home_phone_value">+34 912 345 678</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_history">History</string>
+    <string name="menu_booking">Booking</string>
+
+    <!-- Strings for booking steps -->
+
+    <string name="booking_step1_title">Select a service</string>
+    <string name="booking_step2_title">Choose a barber</string>
+    <string name="booking_step3_title">When do you want to visit?</string>
+    <string name="booking_step3_input">SELECT DATE</string>
+    <string name="booking_step3_no_input">No date selected</string>
+    <string name="booking_step3_hours">Available time slots</string>
+    <string name="booking_step4_title">Your booking summary</string>
+    <string name="booking_step4_service">Service: </string>
+    <string name="booking_step4_barber">Barber: </string>
+    <string name="booking_step4_date">Date: </string>
+    <string name="booking_step4_hour">Time: </string>
+    <string name="booking_step4_btn_confirm">Confirm booking</string>
+
+
+    <string name="history_title">Appointment History</string>
+    <string name="history_next_appointments">Upcoming Appointments</string>
+    <string name="history_completed">Completed</string>
+
+
+    <string name="status_pending">Pending</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_invoice">View Invoice</string>
+
+    <string name="placeholder_service">Service</string>
+    <string name="placeholder_barber">Barber</string>
+
+
+    <!-- Strings for historyFragment -->
+    <string name="error_technical">Technical error: %s</string>
+    <string name="dialog_cancel_title">Cancel appointment</string>
+    <string name="dialog_cancel_message">Are you sure you want to cancel your appointment for %s?</string>
+    <string name="btn_yes_cancel">Yes, cancel</string>
+    <string name="btn_no">No</string>
+    <string name="toast_appointment_cancelled">Appointment cancelled</string>
+    <string name="toast_error_cancel">Error cancelling</string>
+    <string name="toast_error_connection">Connection error</string>
+    <string name="toast_no_pdf_app">No PDF viewer app found</string>
+</resources>

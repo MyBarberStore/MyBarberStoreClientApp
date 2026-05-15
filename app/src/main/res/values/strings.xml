@@ -1,0 +1,90 @@
+<resources>
+    <!-- Strings for Login -->
+    <string name="app_name">MybarberStore</string>
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="login_btn">Iniciar Sesión</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="error_empty_fields">Rellena todos los campos</string>
+    <string name="error_login">Credenciales incorrectas</string>
+    <string name="success_login">Bienvenido, %1$s</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="no_account">¿No tienes una cuenta?</string>
+    <string name="create_account">Crea una cuenta</string>
+    <string name="subtitle_login">Accede a tu barbería de confianza</string>
+    <string name="welcome_back">¡Bienvenido de nuevo!</string>
+    <string name="password_label">Contraseña</string>
+
+    <!-- Strings for Register -->
+    <string name="title_register">Crea tu cuenta</string>
+    <string name="subtitle_register">Únete a nuestra comunidad</string>
+    <string name="name_label">Nombre completo</string>
+    <string name="phone_label">Número de teléfono</string>
+    <string name="register_btn">Registrarse</string>
+    <string name="already_account">¿Ya tienes una cuenta?</string>
+    <string name="login_link">Inicia sesión</string>
+    <string name="success_register">Cuenta creada con éxito</string>
+
+    <!-- Strings for home -->
+    <string name="app_name_brand">BarberPro</string>
+    <string name="home_welcome_title">¡Bienvenido!</string>
+    <string name="home_welcome_sub">Bienvenido a BarberPro</string>
+    <string name="home_promo_title">Estilo y tradición</string>
+    <string name="home_promo_sub">La mejor barbería de tu ciudad</string>
+    <string name="home_location_label">Nuestra ubicación</string>
+    <string name="home_btn_maps">Maps</string>
+    <string name="home_address_label">Dirección</string>
+    <string name="home_address_value">Calle Gran Vía Parque, Córdoba</string>
+    <string name="home_phone_label">Teléfono</string>
+    <string name="home_phone_value">+34 912 345 678</string>
+
+    <!-- Strings for menu -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_history">Historial</string>
+    <string name="menu_booking">Reservar</string>
+
+    <!-- Strings for booking -->
+    <string name="booking_step1_title">Selecciona un servicio</string>
+    <string name="booking_step2_title">Elige un barbero</string>
+    <string name="booking_step3_title">¿Cuando quieres venir?</string>
+    <string name="booking_step3_input">SELECCIONAR FECHA</string>
+    <string name="booking_step3_no_input">No se ha seleccionado fecha</string>
+    <string name="booking_step3_hours">Horas disponibles</string>
+    <string name="booking_step4_title">Resumen de tu reserva</string>
+    <string name="booking_step4_service">Servicio: </string>
+    <string name="booking_step4_barber">Barbero: </string>
+    <string name="booking_step4_date">Fecha: </string>
+    <string name="booking_step4_hour">Hora: </string>
+    <string name="booking_step4_btn_confirm">Confirmar reserva</string>
+
+
+    <string name="history_title">Historial de Citas</string>
+    <string name="history_next_appointments">Próximas citas</string>
+    <string name="history_completed">Completadas</string>
+
+    <string name="status_pending">Pendiente</string>
+    <string name="status_completed">Completada</string>
+    <string name="status_cancelled">Cancelada</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_invoice">Ver Factura</string>
+
+    <string name="placeholder_service">Servicio</string>
+    <string name="placeholder_barber">Barbero</string>
+
+
+    <!-- Strings for historyFragment -->
+    <string name="error_technical">Error técnico: %s</string>
+    <string name="dialog_cancel_title">Cancelar cita</string>
+    <string name="dialog_cancel_message">¿Estás seguro de que quieres cancelar tu cita de %s?</string>
+    <string name="btn_yes_cancel">Sí, cancelar</string>
+    <string name="btn_no">No</string>
+    <string name="toast_appointment_cancelled">Cita cancelada</string>
+    <string name="toast_error_cancel">Error al cancelar</string>
+    <string name="toast_error_connection">Error de conexión</string>
+    <string name="toast_no_pdf_app">No tienes ninguna app para ver PDFs</string>
+
+
+
+
+
+</resources>
