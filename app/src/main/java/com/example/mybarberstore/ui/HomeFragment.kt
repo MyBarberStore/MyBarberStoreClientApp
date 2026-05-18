@@ -1,10 +1,14 @@
 package com.example.mybarberstore.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.view.MotionEvent
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.mybarberstore.R
@@ -21,6 +25,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var sessionManager: SessionManager
     private var map: MapView? = null // Guardamos la referencia para onResume/onPause
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -52,7 +57,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         map = view.findViewById(R.id.mapViewHome)
         map?.let {
             it.setMultiTouchControls(true)
-            val startPoint = GeoPoint(37.8882, -4.7794)
+            val startPoint = GeoPoint(37.8814, -4.7937)
             val mapController = it.controller
             mapController.setZoom(17.5)
             mapController.setCenter(startPoint)
@@ -62,6 +67,29 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
             startMarker.title = "BarberPro Central"
             it.overlays.add(startMarker)
+        }
+
+        //detener el scroll view si se pulsa en el mapa
+        val scrollView = view.findViewById<androidx.core.widget.NestedScrollView>(R.id.nestedScrollView)
+
+        map?.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    // En cuanto el dedo roza el mapa, bloqueamos el scroll principal
+                    scrollView.requestDisallowInterceptTouchEvent(true)
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    // Nos aseguramos de mantenerlo bloqueado mientras el dedo se mueva por el mapa
+                    scrollView.requestDisallowInterceptTouchEvent(true)
+                }
+                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                    // Al levantar el dedo, liberamos el scroll principal para que la pantalla se mueva normal
+                    scrollView.requestDisallowInterceptTouchEvent(false)
+                    v.performClick()
+                }
+            }
+            // Devolvemos false para que Osmdroid pueda procesar el movimiento interno del mapa y el zoom
+            false
         }
     }
 

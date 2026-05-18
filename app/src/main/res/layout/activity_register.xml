@@ -68,7 +68,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:hintEnabled="false"
-                app:startIconDrawable="@android:drawable/ic_menu_edit">
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@color/cardview_dark_background"
+                >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
@@ -76,6 +78,8 @@
                     android:background="@drawable/bg_input_rounded"
                     android:hint="Juan Pérez"
                     android:inputType="textPersonName"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint"
                     android:padding="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +98,9 @@
                 app:hintEnabled="false"
                 android:textColor="@color/text_dark"
                 android:textColorHint="@color/text_hint"
-                app:startIconDrawable="@android:drawable/ic_dialog_email">
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                app:startIconTint="@color/cardview_dark_background"
+                >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
@@ -122,7 +128,9 @@
                 app:hintEnabled="false"
                 android:textColor="@color/text_dark"
                 android:textColorHint="@color/text_hint"
-                app:startIconDrawable="@android:drawable/stat_sys_phone_call">
+                app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+                app:startIconTint="@color/cardview_dark_background"
+                >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPhone"
                     android:layout_width="match_parent"
@@ -151,7 +159,8 @@
                 app:passwordToggleEnabled="true"
                 android:textColor="@color/text_dark"
                 android:textColorHint="@color/text_hint"
-                app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+                app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                app:startIconTint="@color/cardview_dark_background">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
@@ -159,6 +168,8 @@
                     android:background="@drawable/bg_input_rounded"
                     android:hint="........"
                     android:inputType="textPassword"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint"
                     android:padding="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 

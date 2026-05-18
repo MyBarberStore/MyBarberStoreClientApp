@@ -82,14 +82,15 @@
                 app:hintEnabled="false"
                 android:textColor="@color/text_dark"
                 android:textColorHint="@color/text_hint"
-                app:startIconDrawable="@android:drawable/ic_dialog_email">
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                app:startIconTint="@color/cardview_dark_background" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_input_rounded"
-                    android:hint="admin@gmail.com"
+                    android:hint="example@gmail.com"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/text_dark"
                     android:textColorHint="@color/text_hint"
@@ -112,7 +113,8 @@
                 app:passwordToggleEnabled="true"
                 android:textColor="@color/text_dark"
                 android:textColorHint="@color/text_hint"
-                app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+                app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                app:startIconTint="@color/cardview_dark_background" >>
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
